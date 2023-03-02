@@ -1,1 +1,3 @@
 #new day
+
+print('Hi')
