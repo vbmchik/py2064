@@ -12,3 +12,5 @@ https://zoom.us/rec/share/Tizbf3ObCo95Hy0KCL6_S5wzDnF97oLcK1DKXuvXcUbNYIuUtZJZ11
 Passcode: D+ZlJ9mE
 
 06-03
+https://zoom.us/rec/share/M0c1jz1zUZGjl7J4TsozmUEHeHkb3lwA7rVMJqnLTygjyM6XLLVGWYsDw2Zc9WH5.SsiXDu2LdlRd_Poi 
+Passcode: 4XMw=RVV
