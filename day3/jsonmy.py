@@ -1,7 +1,7 @@
 import json
 
 def printJson(object):
-    return json.dumps(object)
+    return json.dumps(object, ensure_ascii=False)
 
 def string2object(st):
     if st == None:

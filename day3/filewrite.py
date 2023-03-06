@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from jsonmy import printJson
 
 coding="utf-8"
@@ -14,8 +16,8 @@ beasts.append({
     "Цвет": "Коричневый",
     "Серии": ["Долгая рыбалка", "Кулинария", "Танцор Диско"]
 })
-
-with open("beasts.json", "w+t", encoding="utf-8") as somefile:
+s = printJson(beasts)
+with open("beasts.json", "w" ) as somefile:
     somefile.write(printJson(beasts))
     
 
