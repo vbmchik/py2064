@@ -26,10 +26,25 @@
 # Создавайте )
 # deleteBeast(omg,'Копатыч')
 
-def getBeastByName(beasts, name):
-    beast = list(filter(lambda beast: beast["Имя"] == name, beasts))[0]
-    return beast
 
+def getDictsByKeyValue(dicts, key, value):
+    dictsres = list(filter(lambda dict: dict[key] == value, dicts))
+    return dictsres
+
+def getBeastByName(beasts, name):
+    return getDictsByKeyValue(beasts,"Имя", name)[0]
+
+def deleteBeastByName(beasts: list, name):
+    beasts.remove(getDictsByKeyValue(beasts, "Имя", name)[0])
+    
+def addSerie(beasts, name, serie):
+    getDictsByKeyValue(beasts, "Имя", name)[0]["Серии"].append(serie)
+    
+def delSerie(beasts, name, serie):
+    getDictsByKeyValue(beasts, "Имя", name)[0]["Серии"].remove(serie)
+
+
+lp = "Любимая фраза"
 beasts = list()
 
 beasts.append({
@@ -44,6 +59,14 @@ beasts.append({
     "Серии": ["Долгая рыбалка", "Кулинария", "Танцор Диско"]
 })
 beasts2 = beasts.copy()
-print(list(filter(lambda beast: beast["Имя"] == "Лосяш", beasts)))
-#print(beasts)
-#print(getBeastByName(beasts,"Лосяш"))
+
+getBeastByName(beasts,"Лосяш")[lp] = "Святые угодники!"
+getBeastByName(beasts,"Копатыч")[lp] = "Тысяча чертей!"
+deleteBeastByName(beasts, "Копатыч")
+print(beasts)
+
+l = [1,2,3,4,2,3,4]
+
+m = list(filter(lambda x: x==1, l))
+print(m)
+print(m[0])
