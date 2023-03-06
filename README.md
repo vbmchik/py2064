@@ -10,3 +10,5 @@ Passcode: w?gvB+17
 02-03
 https://zoom.us/rec/share/Tizbf3ObCo95Hy0KCL6_S5wzDnF97oLcK1DKXuvXcUbNYIuUtZJZ112vHVwmDtRS.CuD0BkO_vH8-_pKP?startTime=1677776218000
 Passcode: D+ZlJ9mE
+
+06-03
