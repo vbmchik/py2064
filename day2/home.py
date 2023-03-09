@@ -31,17 +31,17 @@ def getDictsByKeyValue(dicts, key, value):
     dictsres = list(filter(lambda dict: dict[key] == value, dicts))
     return dictsres
 
-def getBeastByName(beasts, name):
+def getBeastByName(beasts, name: str):
     return getDictsByKeyValue(beasts,"Имя", name)[0]
 
 def deleteBeastByName(beasts: list, name):
     beasts.remove(getDictsByKeyValue(beasts, "Имя", name)[0])
     
 def addSerie(beasts, name, serie):
-    getDictsByKeyValue(beasts, "Имя", name)[0]["Серии"].append(serie)
+    getBeastByName(beasts, name)["Серии"].append(serie)
     
 def delSerie(beasts, name, serie):
-    getDictsByKeyValue(beasts, "Имя", name)[0]["Серии"].remove(serie)
+    getBeastByName(beasts, name)["Серии"].remove(serie)
 
 
 lp = "Любимая фраза"

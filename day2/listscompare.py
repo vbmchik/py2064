@@ -27,12 +27,10 @@ l3 = [2,4,6,3,4,2,3,4]
 l4 = [11,13,14,15,16,17]
 # Ищем есть ли общиме элементы у списоков - элементов большого списка
 def combunit( ar ):
-    p = set(l[0])
+    p = set(ar[0])
     for x in range(1,len(ar)):
-        uni = set()
-        for y in p & set(ar[x]):   
-             uni.add(y)
-        p = uni.copy()
+        p = p & set(x)
+        
     if( len(p)> 0):    
         print(p, ar)
 
