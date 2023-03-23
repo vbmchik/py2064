@@ -1,0 +1,8 @@
+1 попробуйте сделать textdata на циклах
+2 сделайте createresult на dictionaty comprehension
+[ x for x in range(9)]
+[ x: x+2 for x in range(9) ]
+3 обработка исключений!
+    там где могут быть ошибки exception мы их обрабатываем и в класс добавляем параметры
+    errorFlag (True|False)
+    errorMessage (str - расшифровка ошибки)
