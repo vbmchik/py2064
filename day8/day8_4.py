@@ -25,4 +25,7 @@ resulttest = dict(
         groupby(data, key=lambda x: x[2])
     )
 )
-pprint(resulttest)
+
+
+trt = { y[0]: {t[1]: t[0] for t in y[1] } for y in groupby(data, key=lambda x: x[2])}
+pprint(trt)
