@@ -20,6 +20,13 @@
 # If you're wondering how this is created, it is generated using
 # `scripts/generate.py` in https://github.com/pypa/get-pip.
 
+from base64 import b85decode
+import importlib
+import argparse
+import tempfile
+import shutil
+import pkgutil
+import os.path
 import sys
 
 this_python = sys.version_info[:2]
@@ -28,19 +35,11 @@ if this_python < min_version:
     message_parts = [
         "This script does not work on Python {}.{}".format(*this_python),
         "The minimum supported Python version is {}.{}.".format(*min_version),
-        "Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".format(*this_python),
+        "Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".format(
+            *this_python),
     ]
     print("ERROR: " + " ".join(message_parts))
     sys.exit(1)
-
-
-import os.path
-import pkgutil
-import shutil
-import tempfile
-import argparse
-import importlib
-from base64 import b85decode
 
 
 def include_setuptools(args):
@@ -126,7 +125,7 @@ def main():
         # Unpack the zipfile into the temporary directory
         pip_zip = os.path.join(tmpdir, "pip.zip")
         with open(pip_zip, "wb") as fp:
-            fp.write(b85decode(DATA.replace(b"\n", b"")))
+            fp.write(b85decode(DATA.replace(b" ", b"")))
 
         # Add the zipfile to sys.path so that we can import it
         sys.path.insert(0, pip_zip)

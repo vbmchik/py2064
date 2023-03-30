@@ -7,18 +7,18 @@ class Textdata():
         self.data = []
         self.map = {}
         self.calendar = {
-            'JAN': 1,
-            'FEB': 2,
-            'MAR': 3,
-            'APR': 4,
-            'MAY': 5,
-            'JUN': 6,
-            'JLY': 7,
-            'AUG': 8,
-            'SEP': 9,
-            'OCT': 10,
-            'NOV': 11,
-            'DEC': 12
+            "JAN": 1,
+            "FEB": 2,
+            "MAR": 3,
+            "APR": 4,
+            "MAY": 5,
+            "JUN": 6,
+            "JLY": 7,
+            "AUG": 8,
+            "SEP": 9,
+            "OCT": 10,
+            "NOV": 11,
+            "DEC": 12
         }
 
     def readfile(self, filename):
@@ -34,6 +34,11 @@ class Textdata():
             print('file not found!')
         return self
 
+    def importData(self, list):
+        self.data.extend(list)
+        self.data.sort(key=lambda x: x[2])
+        return self
+    
     def createresult(self):
         self.map = dict(
             map(
@@ -55,6 +60,3 @@ class Textdata():
         return l
 
 
-t = Textdata().readfile('input.txt').createresult()
-
-print(t.map)
