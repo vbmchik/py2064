@@ -46,3 +46,7 @@ Passcode: zzX0=V64
 03-04
 https://zoom.us/rec/share/udwMmzW52VkG4pFqcf5csClum9E5EHLzC0sueN0TFFyEBQ4rTzPhnol156Y-LyXE.EK7hPTWDebb0PWWB 
 Passcode: Yj.L^2JF
+
+10-04
+https://zoom.us/rec/share/zWvlPj2OOflupZxnXEzcxg1CRYv5ffGyS6XjO0CNpkYilPtJFVLLyxMnaYvAFaA5.UwVTwarRXaugESTW 
+Passcode: txJs0C&k
