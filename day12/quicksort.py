@@ -27,8 +27,10 @@ def quicksortplanar(array):
             stack.append((low, pivot-1))
         if high >= pivot + 1:
             stack.append((pivot+1, high))
-   
-
+# 2 4 3 5 1  
+# 2 1 3 5 4
+# уже поменяли
+# нам нужно все элементы меньше чем pivot переместить в начало нашего списка
 def partition(array, low, high):
     pivot = random.randint(low, high)
     array[pivot], array[high] = array[high], array[pivot]
