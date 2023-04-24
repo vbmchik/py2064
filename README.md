@@ -63,3 +63,7 @@ Passcode: ^a4sGD$8
 20-04
 https://zoom.us/rec/share/4mBqfKJpjR7ziOz1F2749V-emIcqCINJ4UIrHwepA_Go5A2byHA7unTQirVPOxPW.-IaEdIszX56ED1wq 
 Passcode: *vC.^!b8
+
+24-04
+https://zoom.us/rec/share/Ztpe8pzEl7OMYstB9BeZBv-v2Va2s2u3I_qim7p3Ulq2ud5AVHMutDfSBj9wSmRY.qFJY1lDlvhnis46e 
+Passcode: bxNP22m&

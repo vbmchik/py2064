@@ -1,7 +1,7 @@
 import sys
 from dbHelp import DataHelp
 
-dataHelp = DataHelp(host="localhost", user="vbm", password="!QA2ws3ed")
+dataHelp = DataHelp()
 
 def inputImp(question):
     p = input(question+"\t")
