@@ -17,7 +17,7 @@ def main(page: Page):
         funcs = func.value
         
         try:
-            values = list(map(lambda t: solve(funcs.replace('@x', f"{(t)}")), data))
+            values = list(map(lambda t: solve(funcs.replace('@x', f"{t}")), data))
             df = pandas.DataFrame(dict(x=data,y=values))
             fig = px.line(df, x="x", y="y", title=f"User function = {funcs}")
             column = Column([
