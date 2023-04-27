@@ -2,12 +2,14 @@ import mysql.connector
 
 class DataHelp:
     
-    def __init__(self, host, user, password):
-        self.find = mysql.connector.connect(host=host, user=user, password=password)
-        
+    def __init__(self):
+        self.find = mysql.connector.connect(host="localhost", user="vbm", password="!QA2ws3ed")
+        #self.replace_data
+        #self.replace_condition
+        #self.replace_query
         
     def replace_data_set(self, **kwargs):
-        self.replace_data_set = kwargs 
+        self.replace_data_set = kwargs
         return self
 
     def replace_condition_set( self, **kwargs):
