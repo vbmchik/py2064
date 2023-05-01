@@ -71,3 +71,7 @@ Passcode: bxNP22m&
 27-04
 https://zoom.us/rec/share/ycFJ8Eu3YvLtWigqgiBIYkoRSXWGmH0Yx7z3mV9_3JES2u3clV9HNzvFsxgsJ1Yd.Gzt29Om2gfFffFRP 
 Passcode: 4%c.d0v*
+
+01-05
+https://zoom.us/rec/share/NilSJNz-5giBkUDk2MLoX6Y__15jzgRxCfStRujvkevO_Td4BwPAEiZzcLmxWZ8O.f7GHCCvLrTeNvkli 
+Passcode: VJ3bN1?u
