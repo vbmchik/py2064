@@ -30,7 +30,8 @@ def search():
     except Exception as e:
         print(str(e))
         return Response("[]",status=400)  
-    response = Response(json.dumps(result), content_type="application/json; charset=utf-8")
+    print(json.dumps(result))
+    response = Response(json.dumps(result, ensure_ascii=False).encode('utf8'), content_type="application/json; charset=utf-8")
     return response
 
 
