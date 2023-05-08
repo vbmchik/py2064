@@ -25,7 +25,7 @@ class DataHelp:
             fields = '*'
         else:
             fields = ', '.join(selection)
-        query = f"select {fields} from db2064.finances "
+        query = f"select {fields} from db2064.train "
         if len(l) > 0:
             query += "where " + ' and '.join(l)
         return self.execute_some_query(query)
@@ -37,7 +37,7 @@ class DataHelp:
         return l
     
     def replace_with_data_and_condition(self):
-        query = f'update db2064.finances set '
+        query = f'update db2064.train set '
         l = self.extract_parameters(self.replace_data_set)    
         query += ', '.join(l)
         query += " where "
@@ -47,9 +47,15 @@ class DataHelp:
         self.find.commit()
     
     def checkExist(self, year, month, business):
-        query = f"select * from db2064.finances where year={year} and month={month} and business={business} "
+        query = f"select * from db2064.train where year={year} and month={month} and business={business} "
         return len(self.execute_some_query(query)) != 0
               
+    def checkExistFromDict(self, exclude="", **kwargs):
+        l = [f"{x}={y}" for x,y in kwargs.items() if x != exclude]
+        s = ' and '.join(l)    
+        query = f"select * from db2064.train where  " + s
+        return len(self.execute_some_query(query)) != 0
+    
     def execute_some_query(self, query):
         cursor = self.find.cursor()
         cursor.execute(query)
@@ -62,17 +68,17 @@ class DataHelp:
             return 
     
     def replace_data(self, year, month, business, income):
-        query = f"update db2064.finances set income={income} where year={year} and business={business} and month={month}"
+        query = f"update db2064.train set income={income} where year={year} and business={business} and month={month}"
         self.execute_some_query(query)
     
     def insert_into_query(self,  **kwargs):
-        query = f"insert into db2064.finances {tuple(kwargs.keys())} values ".replace("'","")
+        query = f"insert into db2064.train {tuple(kwargs.keys())} values ".replace("'","")
         query += f'{tuple( [ x[1] for x in kwargs.items()] )}'
         print(query)
         self.execute_some_query(query)
         self.find.commit()
         
     def read_all_data(self):
-        query = "select * from db2064.finances"
+        query = "select * from db2064.train"
         return self.execute_some_query(query)
         

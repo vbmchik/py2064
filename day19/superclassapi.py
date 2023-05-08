@@ -55,7 +55,7 @@ class GetFromApi():
             if requestType == RequestType.POST:   
                 headers["Content-Type"] = 'application/json' 
                 self.result = requests.post(url=self.URL, headers=headers, data=json.dumps(self.body))
-                if self.result.status_code != 201:
+                if self.result.status_code != 200:
                     raise Exception(f"Error with {self.result.status_code}")
             if requestType == RequestType.PUT:   
                 headers["Content-Type"] = 'application/json' 

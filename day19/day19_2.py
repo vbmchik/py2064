@@ -33,7 +33,15 @@ def search():
     print(json.dumps(result))
     response = Response(json.dumps(result, ensure_ascii=False).encode('utf8'), content_type="application/json; charset=utf-8")
     return response
-
+@app.route(API_PREFIX+"/add", methods=['POST'])
+def add():
+    records = request.json
+    if db.checkExistFromDict(**records):
+        response = {"error": "Record already exists!"}
+    else:
+        db.insert_into_query(**records)
+        response = {"success": "Record created!"}
+    return response
 
 db = DataHelp()
 

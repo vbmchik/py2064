@@ -79,3 +79,7 @@ Passcode: VJ3bN1?u
 04-05 
 https://zoom.us/rec/share/5nDNN90P8uN_AvYcez8tK56ryulj6A1QXKntgiKupPGl0TJv-hgYkB9e72L3AGhh.DdIvyjr9Yiqfj84K 
 Passcode: fr9=C*+r.
+
+08-05
+https://zoom.us/rec/share/g7nP8ENLJDYXTaS3zxq_spsesUjeNFMO-PWq_4T1CBF35ReVAR4ad7lfLN17wl4s.wsYMc9xTPT-jStun 
+Passcode: 5#+ykJA2

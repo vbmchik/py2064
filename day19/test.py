@@ -1,8 +1,12 @@
 from superclassapi import GetFromApi
+from superclassapi import RequestType
 
-g = GetFromApi(baseUrl="http://localhost:5054")\
-    .addMethodAndParams(["/api/v1/test"],  name='Michael')\
-    .GetDataFromApi()
+# https://api.nationalize.io/?name[]=michael&name[]=matthew&name[]=jane
+g = (
+    GetFromApi(baseUrl="https://api.nationalize.io")
+    .addMethodAndParams([""], name='michael')
+    .GetDataFromApi(requestType=RequestType.GET)
+)
 if g.error:
     print(g.errorMessage)
 else:
